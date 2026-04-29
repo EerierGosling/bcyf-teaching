@@ -22,15 +22,40 @@ class USACO { // cow college - 2022 bronze problem 1
     String[] cowsString = sc.nextLine().split(" ");
 
     for (int i = 0; i < N; i++) {
-      cows[i] = cowsString[i];
+      cows[i] = Integer.parseInt(cowsString[i]);
     }
-    int n = cows[0];
+
+
+    int max = 0;
 
     for (int i = 0; i < N; i++) {
-      if (cows[i] > n) {
-        n = cows[i];   
+      if (cows[i] > max) {
+        max = cows[i];   
+      }
+    }
+    
+    int profitMax = 0;
+    int maxCost = max;
+
+    for (int i = max; i > 0; i--) {
+      int iProfit = profit(i, cows);
+      if (iProfit >= profitMax) {
+        profitMax = iProfit;
+        maxCost = i;
       }
     }
 
+    System.out.print(profitMax + " " + maxCost);
+
+  }
+
+  public static int profit(int cost, int[] cows) {
+    int totalProfit = 0;
+    for (int cow : cows) {
+      if (cost <= cow) {
+        totalProfit += cost;
+      }
+    }
+    return totalProfit;
   }
 }
