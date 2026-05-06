@@ -11,7 +11,13 @@ public class ArraysTest {
 
         System.out.println(Arrays.deepToString(array));
 
-        array
+        arrayList.add("hello");
+        arrayList.add("world");
+        arrayList.add("!");
+
+        System.out.println(arrayList.get(1));
+
+        System.out.println(arrayList);
     }
     
 }
