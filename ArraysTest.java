@@ -3,7 +3,7 @@ import java.util.Arrays;
 
 public class ArraysTest {
     public static ArrayList<String> arrayList = new ArrayList<String>();
-    public static int[][][] array = new int[4][2][9];
+    public static int[][][] array = new int[2][2][9];
 
     public static void main(String args[]) {
 
@@ -29,4 +29,4 @@ public class ArraysTest {
 //    [[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0]]
 //    [[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,0,0]]
 //    [[0,0,0,0,0,0,0,0,0],[0,0,0,0,0,0,0,2,0]]
-// ]
+//]
